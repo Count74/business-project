@@ -1,0 +1,39 @@
+%font {
+  font-family: $font_family;
+  color: $color_text;
+}
+  
+%font_normal {
+  @extend %font;
+  font-weight: normal;
+}
+
+%font_medium {
+  @extend %font;
+  font-weight: 500;
+}
+
+%font_semibold {
+  @extend %font;
+  font-weight: 600;
+}
+
+%font_bold {
+  @extend %font;
+  font-weight: bold;
+}
+
+%font_GeoSlab {
+  font-family: 'Geo Slab 703 BT', sans-serif;
+  font-weight: 500;
+}
+
+%font_Georgia {
+  font-family: Georgia, 'Times New Roman', Times, serif;;
+  font-weight: normal;
+}
+
+%font_Montserrat {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}

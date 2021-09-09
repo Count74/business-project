@@ -1,0 +1,126 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px 15px 0;
+
+    .header__logo{
+        width: 141px;
+        height: 48px;
+        background-image: url($svg + "logo.svg");
+    }
+
+    .header__description {
+        @extend %font_medium;
+        line-height: 18px;
+        max-width: 150px;
+        margin: 0 0 0 22px;
+    }
+
+    .header__round_btn {
+        border-radius: 50%;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0px 8px 13px 0px rgba(0, 0, 0, 0.14);
+        width: 29px;
+        height: 29px;
+ }
+    
+    .header__buttons {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        align-self: flex-start;
+        
+        .header__buttons_telegram {
+            background-image: url($svg + "telegram.svg");
+            width: 29px;
+            height: 29px;
+            margin: 0 12px;
+        }
+        .header__buttons_whatsup {
+            background-image: url($svg + "whatsup.svg");
+            width: 29px;
+            height: 29px;
+            margin: 0 12px;
+        }
+        .header__buttons_phone{
+            @extend .header__round_btn;
+            background-image: url($svg + "phone.svg");
+            background-position: center center;
+            background-repeat: no-repeat;
+            margin: 0 12px;
+        }
+    }
+
+    a {
+        display: block;
+        @extend %font_medium;
+        font-size: 15px;
+        color: rgb(255, 78, 0);
+        text-decoration: underline;
+        line-height: 1.2;
+        margin-top: 10px;
+    }
+
+    .header__address,
+    .header__email,
+    .header__phone
+     {
+        @extend %font_semibold;
+        font-size: 17px;
+        color: rgb(48, 48, 48);
+        line-height: 1.2;
+    }
+    .header__phone {      
+        a {
+            margin-left: 50px;
+        }  
+
+        .header__phone__text{
+            display: flex;
+            align-items: center;
+
+            &::before{
+                content: ' ';
+                display: block;
+                @extend .header__round_btn;
+                background-image: url($svg + "phone.svg");
+                background-position: center center;
+                background-repeat: no-repeat;
+                margin: 0 12px;
+            }
+        }
+    }
+
+    .header__email {     
+        a {
+            margin-left: 40px;
+        }   
+        .header__email__text {
+            display: flex;
+       
+            &::before {
+                content: ' ';
+                display: block;
+                height: 12px;
+                width: 15px;
+                background-image: url($svg + "email.svg");
+                background-position: center center;
+                background-repeat: no-repeat;
+                margin: 6px 12px;
+            }
+        }
+    }
+
+    .header__round_btn {
+            border-radius: 50%;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0px 8px 13px 0px rgba(0, 0, 0, 0.14);
+            width: 29px;
+            height: 29px;
+     }
+}
+
+.line {
+    width: 100%;
+}
