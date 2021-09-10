@@ -1,0 +1,54 @@
+.garanty_cards {
+    display: flex;
+    justify-content: flex-start;
+
+    .garanty_card {
+        padding: 300px 15px 60px 15px;
+        margin: 0 10px;
+        background-color: #fff;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        border-radius: 10px;
+        box-shadow: 0px 8px 35px 0px rgba(0, 0, 0, 0.14);
+        max-width: 365px;
+        height: 500px;
+        position: relative;
+
+        .icon {
+            border-radius: 50%;
+            background-color: rgb(255, 255, 255);
+            background-position: center;
+            background-repeat: no-repeat;
+            box-shadow: 0px 10px 38px 0px rgba(0, 0, 0, 0.07),0px 6px 21px 0px rgba(255, 255, 255, 0.7);
+            position: absolute;
+            left: calc(50% - 53px);
+            top: 167px;
+            width: 106px;
+            height: 106px;
+            z-index: 2;
+        }
+
+        .title {
+            @extend %font_bold;
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .text {
+            @extend %font;
+            font-size: 15px;
+            text-align: center;
+        }
+    }
+
+    @for $i from 1 through 3 {
+        .garanty_card:nth-child(#{$i}) {
+            background-image: url($images + "garanty_card_0" + $i + ".jpg");
+
+            .icon {
+                background-image: url($svg + "garanty_card_0" + $i + ".svg");
+            }
+        }
+      }
+}

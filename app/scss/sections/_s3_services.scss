@@ -1,0 +1,65 @@
+.garanty_cards {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+
+    .card {
+        background-color: #fff;
+        width: 50%;
+        min-height: 284px;
+        padding: 40px 0 40px 40px;
+        display: flex;
+        justify-content: center;
+
+        .card_content {
+            width: 80%;
+            padding-right: 20px;
+        }
+
+        .card_icon {
+            margin-bottom: 30px;
+        }
+
+        .card_title {
+            @extend %font_bold;
+            color: inherit;
+            font-size: 20px;
+            margin: 15px 0;
+        }
+
+        .card_text {
+            @extend %font;
+            color: inherit;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .arrow_btn {
+            height: 58px;
+            width: 58px;
+            display: block;
+            border: 1px solid #dadada;
+            border-radius: 50%;
+            align-self: flex-end;
+            background-image: url($svg + "right_arrow_gray.svg");
+            margin-right: 40px;
+            background-repeat: no-repeat;
+            background-position: center;
+            cursor: pointer;
+        }
+
+    }
+    
+    .green {
+        background-image: linear-gradient( 126deg, rgb(63,103,63) 0%, rgb(157,188,100) 100%);
+        color: #fff;
+
+        .arrow_btn {
+            border: 1px solid #d5f0ca;
+            background-image: url($svg + "right_arrow_white.svg");
+        }
+    }
+}

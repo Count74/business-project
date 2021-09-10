@@ -5,11 +5,67 @@
 @import 'mixins';
 
 @import 'sections/s1_header';
+@import 'sections/s2_main_slider';
+@import 'sections/s3_services';
+@import 'sections/s4_garanty';
+@import 'sections/s5_business_plan';
+@import 'sections/s6_scheme';
 
+body {
+    background-color: #f8f8f8;
+}
 
+h2 {
+    @extend %font_bold;
+    line-height: 1.2;
+    position: relative;
+    text-align: center;
 
+    &::after {
+
+        position:absolute;
+        bottom: -12px;
+        left: 0;
+        left: calc(50% - 35px);
+        width: 70px;
+        border-top: 4px solid #314f30;
+        content: " ";
+        display: block;
+    }
+}
 
 .container {
     max-width: 1170px;
     margin: 0 auto;
 }
+
+button.orange {
+    // background: url($images + "orange_btn_line.png") no-repeat;
+    background-image: url($images + "orange_btn_line.png") , linear-gradient( 90deg, rgb(254,81,3) 0%, rgb(243,125,73) 100%),;
+    background-repeat: no-repeat, no-repeat;
+    background-position: 20px, center;
+    // background-color: rgb(254,81,3);
+    box-shadow: 0px 8px 35px 0px rgba(0, 0, 0, 0.35),
+                0px 4px 0px 0px rgba(210, 76, 16, 0.004),
+                0px 4px 2px #a13a0c;
+    padding: 0 40px;
+    border-radius: 26px;
+    border: 0;
+
+      
+
+    // @extend %font_semibold;
+    @extend %font_medium;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    line-height: 1.2;
+    height: 55px;
+
+    &:active,
+    &:focus {
+        outline: none;
+    }
+}
+
+
+  
