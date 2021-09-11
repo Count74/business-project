@@ -1,0 +1,98 @@
+.director {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 50px;
+
+    .director__photo {
+        background: url($images + "director.jpg") no-repeat top;
+        min-width: 506px;
+        height: 570px;
+        display: block;
+    }
+
+    .director__text_block{
+        position: relative;
+        margin-top: 30px;
+        max-width: 614px;
+
+        .quote{
+            @extend %font_Georgia;
+            font-size: 150px;
+            color: #8eb24c;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+        }
+
+        .name {
+            @extend %font_bold;
+            font-size: 36px;
+        }
+
+        .position {
+            @extend %font_semibold;
+            font-size: 18px;
+            margin: 24px 0 30px;
+        }
+
+        .description {
+            @extend %font;
+            font-style: 15px;
+        }
+
+        .title {
+            @extend %font_bold;
+            font-size: 30px;
+            margin: 30px 0 20px;
+        }
+
+        .request_form {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .form {
+            input {
+                display: block;
+                margin: 20px 0;
+            }
+
+            input.phone {
+                border-width: 1px;
+                border-color: rgb(204, 204, 204);
+                border-style: solid;
+                background-color: rgb(255, 255, 255);
+                min-width: 305px;
+                height: 54px;
+                border-radius: 54px;
+                padding-left: 10px;
+            }
+
+            input.orange {
+                min-width: 305px;
+            }
+        }
+
+        .callus{
+            margin-top: 40px;
+            .text {
+                @extend %font_medium;
+                font-size: 18px;
+                text-align: center;
+              }
+
+              .phone{
+                @extend %font_bold;
+                font-size: 24px;
+                text-align: center;
+              }
+
+              .text2 {
+                @extend %font;
+                font-size: 14px;
+                text-align: center;
+              }
+        }
+    }
+}

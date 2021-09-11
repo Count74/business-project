@@ -1,0 +1,79 @@
+.scheme {
+    display: flex;
+    // justify-content: flex-start;
+    margin-bottom: 50px;
+}
+
+.scheme_item {
+    width: 174px;
+    margin-right: 20px;
+
+    .scheme_item__number {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .check_mark {
+            height: 28px;
+            width: 28px;
+            background: #9fc260 url($svg + "check_mark.svg") no-repeat center;
+            border-radius: 50%;
+            display: block;
+            position: absolute;
+            top: calc(50% - 12px);
+            left: -8px;
+        }
+
+        .number {
+            @extend %font_GeoSlab;
+            font-size: 90px;
+            color: rgba(172, 172, 172, 0.3);
+            line-height: 1.2;
+            background: linear-gradient(180deg, #dadada 33%, #ececec 66%, #fafafa);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .arrow {
+            background: url($svg + "scheme_arrow.svg") no-repeat center;
+            width: 15px;
+            height: 27px;
+            display: block;
+        }
+    }
+
+    .scheme_item__text {
+        
+
+        .title {
+            position: relative;
+            @extend %font_bold;
+            font-size: 16px;
+            color: rgb(43, 43, 43);
+            line-height: 1.2;
+            max-width: 130px;
+            margin: 10px 0 20px;
+
+            &::after {
+                position:absolute;
+                bottom: -12px;
+                left: 0;
+                width: 70px;
+                border-top: 3px solid #314f30;
+                content: " ";
+                display: block;
+            }
+        }
+
+        .text {
+            @extend %font;
+            font-size: 13px;
+          }
+          
+          
+    }
+}
+
+
+  

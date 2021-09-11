@@ -10,6 +10,12 @@
 @import 'sections/s4_garanty';
 @import 'sections/s5_business_plan';
 @import 'sections/s6_scheme';
+@import 'sections/s7_director';
+@import 'sections/s8_commands';
+@import 'sections/s9_our_works';
+@import 'sections/s10_clients';
+@import 'sections/s11_qa';
+@import 'sections/s12_footer';
 
 body {
     background-color: #f8f8f8;
@@ -22,7 +28,6 @@ h2 {
     text-align: center;
 
     &::after {
-
         position:absolute;
         bottom: -12px;
         left: 0;
@@ -39,7 +44,18 @@ h2 {
     margin: 0 auto;
 }
 
-button.orange {
+.lighter_bg {
+    width: 100%;
+    background-color: #fcfefe;
+}
+
+.text {
+    @extend %font_medium;
+    font-size: 18px;
+}
+
+button.orange,
+input.orange {
     // background: url($images + "orange_btn_line.png") no-repeat;
     background-image: url($images + "orange_btn_line.png") , linear-gradient( 90deg, rgb(254,81,3) 0%, rgb(243,125,73) 100%),;
     background-repeat: no-repeat, no-repeat;

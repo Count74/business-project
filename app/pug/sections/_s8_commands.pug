@@ -1,0 +1,15 @@
+mixin team_item(num, name, position)
+    .team__item
+        .photo
+            img(src="images/team_0" + num + ".jpg")
+        .name= name 
+        .position= position
+
+.container 
+    h2 Кто будет работать над вашим проектом 
+    .team 
+        +team_item("1", "Бауыржан Калменов", "Экономист")
+        +team_item("2", "Денис Скородумов", "Маркетолог")
+        +team_item("3", "Юлия Дойникова", "Маркетолог")
+        +team_item("4", "Дмитрий Грохольский", "Маркетолог")
+        +team_item("5", "Бауыржан Калменов", "Экономист")
