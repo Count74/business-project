@@ -1,6 +1,38 @@
+mixin client_item(id, title)
+    .client_slider__item 
+        .image
+            img(src="images/сlient_" + id + ".png") 
+        .client_title= title
 .container 
     .clients 
         .clients__text_block 
-            .title Разработанные нами бизнес-планы, успешно проходят экспертизы и получают финансирование у крупнейших инвестиционных операторов различных государственных программ
+            .title 
+                |Разработанные нами
+                br
+                |бизнес-планы, успешно 
+                br
+                |проходят экспертизы и 
+                br
+                |получают финансирование у
+                br
+                |крупнейших инвестиционных 
+                br
+                |операторов различных 
+                br
+                |государственных программ
             .text Также помимо подготовки проектов в государственные структуры, мы успешно разрабатываем бизнес-планы и ТЭО для кредитования в банки второго уровня по всему Казахстану
-        .clients__sliders fwef
+        .clients__sliders
+            .client_slider 
+                +client_item("01", "ДАМУ")
+                +client_item("02", "СПК-АСТАНА")
+                +client_item("03", "АКИМАТ Г. НУР-СУЛТАН")
+                +client_item("04", "АО «Аграрная кредитная корпорация")
+                .slider_nav
+                    .bar.active 
+                    .bar
+
+            .client_slider 
+                +client_item("05", "Jusan Bank")
+                +client_item("06", "Halyk Bank")
+                +client_item("07", "Альфа-Банк")
+                +client_item("08", "АТФ Банк")

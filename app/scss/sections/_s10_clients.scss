@@ -1,25 +1,87 @@
 .clients {
+    margin-top: 100px;
     display: flex;
     justify-content: space-between;
+    background: url($images + "kz_bg.png") no-repeat left bottom;
+    margin-bottom: 80px;
 
     .clients__text_block,
     .clients__sliders {
         width: 46%;
     }
+    
 
     .title {
         @extend %font_bold;
         font-size: 36px;
+        line-height: 1.2;
         position: relative;
         max-width: 520px;
 
         &::after {
             position:absolute;
             left: 0px;
+            bottom: -20px;
             width: 70px;
             border-top: 4px solid #314f30;
             content: " ";
             display: block;
+        }
+    }
+
+    .text {
+        @extend %font;
+        margin-top: 40px;
+        font-size: 18px;
+    }
+
+    .client_slider {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: flex-start;
+
+        .client_slider__item {
+            margin-bottom: 20px;
+            .image {
+                border-radius: 5px;
+                background-color: rgb(255, 255, 255);
+                box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.13);
+                width: 230px;
+                height: 89px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .client_title {
+                @extend %font_medium;
+                width: 230px;
+                font-size: 18px;
+                text-align: center;
+                margin-top: 30px;
+            }
+        }
+
+        .slider_nav {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 40px;
+            
+            .bar {
+                background-color: rgb(204, 204, 204);
+                width: 91px;
+                height: 7px;
+                border-radius: 3px;
+                margin-left: 20px;
+              }
+
+              .active {
+                  background-color: #f96422;
+              }
+              
         }
     }
 }

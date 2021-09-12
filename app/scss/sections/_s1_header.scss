@@ -4,10 +4,16 @@
     justify-content: space-between;
     margin: 30px 15px;
 
+    @include _lg {
+        flex-direction: column;
+    }
+
     .header__logo{
         width: 141px;
         height: 48px;
         background-image: url($svg + "logo.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
     }
 
     .header__description {

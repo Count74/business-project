@@ -1,0 +1,117 @@
+.footer_bg {
+    background-color: #212c21;
+    margin-top: 150px;
+}
+.footer_bg_dark {
+    background-color: #141c14;
+    text-align: center;
+    padding: 24px;
+    @extend %font;
+    font-size: 13px;
+    color: #fff;
+}
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px 40px 20px;
+
+    .footer_logo {
+        max-width: 172px;
+        
+        img {
+            display: block;
+        }
+
+        .text {
+            @extend %font_medium;
+            font-size: 14px;
+            color: #fff;
+            margin-top: 20px;
+        }
+    }
+
+    .footer_menu {
+        ul {
+            list-style: none;
+            li {
+                padding-bottom: 10px;
+                a {
+                    @extend %font_medium;
+                    font-size: 15px;
+                    color: #fff;
+                }
+
+            }
+        }
+    }
+
+    .footer__address {
+        position: relative;
+
+        .footer_button{
+            position: absolute;
+            top:10px;
+            right: 10px;
+            display: flex;
+            justify-content: flex-end;
+
+            .footer_button_telegram  {
+                background-image: url($svg + "telegram.svg");
+                width: 29px;
+                height: 29px;
+                margin-right: 12px;
+            }
+            .footer_button_whatsup {
+                background-image: url($svg + "whatsup.svg");
+                width: 29px;
+                height: 29px;
+            }
+        }
+
+        .footer__address__text {
+            display: flex;
+            align-items: flex-start;
+
+            .icon {
+                border-radius: 50%;
+                background-color: rgb(255, 255, 255);
+                box-shadow: 0px 8px 13px 0px rgba(0, 0, 0, 0.14);
+                width: 29px;
+                height: 29px;
+              }
+              
+            .icon.phone {
+                  background: #fff url($images + "bottom_phone.png") no-repeat center;
+            }
+
+            .icon.mail {
+                background: #fff url($images + "bottom_mail.png") no-repeat center;
+            }
+
+            .icon.map {
+                background: #fff url($images + "bottom_map.png") no-repeat center;
+            }
+
+            .text {
+                margin-left: 12px;
+                @extend %font_semibold;
+                font-size: 17px;
+                color: #fff;
+
+                a {
+                    display: block;
+                    @extend %font_medium;
+                    font-size: 15px;
+                    color: rgb(255, 78, 0);
+                    text-decoration: underline;
+                    line-height: 1.2;
+                    margin-top: 6px;
+                    margin-bottom: 14px;
+                }
+            }
+
+        }
+
+    }
+}
