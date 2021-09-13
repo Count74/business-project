@@ -1,13 +1,20 @@
 .clients {
-    margin-top: 100px;
+    margin-top: 300px;
     display: flex;
     justify-content: space-between;
     background: url($images + "kz_bg.png") no-repeat left bottom;
     margin-bottom: 80px;
 
+    @include _sm {
+        flex-direction: column;
+    }
+
     .clients__text_block,
     .clients__sliders {
         width: 46%;
+        @include _sm {
+            width: 100%;
+        }
     }
     
 
@@ -17,6 +24,9 @@
         line-height: 1.2;
         position: relative;
         max-width: 520px;
+        @include _sm {
+            font-size: 18px;
+        }
 
         &::after {
             position:absolute;
@@ -33,6 +43,9 @@
         @extend %font;
         margin-top: 40px;
         font-size: 18px;
+        @include _sm {
+            font-size: 13px;
+        }
     }
 
     .client_slider {
@@ -40,6 +53,10 @@
         justify-content: space-between;
         flex-wrap: wrap;
         align-items: flex-start;
+        @include _sm {
+            justify-content: center;
+            margin-top: 20px;
+        }
 
         .client_slider__item {
             margin-bottom: 20px;

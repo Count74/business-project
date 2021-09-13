@@ -16,8 +16,17 @@
     align-items: flex-start;
     padding: 40px 40px 20px;
 
+    @include _sm {
+        flex-direction: column;
+        padding: 20px 20px 20px;
+    }
+
     .footer_logo {
         max-width: 172px;
+        @include _sm {
+            margin: 0 auto;
+        }
+    
         
         img {
             display: block;
@@ -28,10 +37,16 @@
             font-size: 14px;
             color: #fff;
             margin-top: 20px;
+            @include _sm {
+               text-align: center;
+            }
         }
     }
 
     .footer_menu {
+        @include _sm {
+            display: none;
+         }
         ul {
             list-style: none;
             li {

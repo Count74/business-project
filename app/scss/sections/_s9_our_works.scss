@@ -9,6 +9,10 @@
     position: relative;
     display: flex;
     justify-content: space-evenly;
+    @include _sm {
+        flex-wrap: wrap;
+    }
+
 
 
     .header {
@@ -24,6 +28,12 @@
         color: #fff;
         @extend %font_bold;
         font-size: 18px;
+
+        @include _sm {
+            transform: scale(.6);
+            left: 2px;
+            top:-60px
+        }
 
         &::after {
             content: ''; 
@@ -43,17 +53,26 @@
         position: absolute;
         right: -500px;
         top: 280px;
+        @include _sm {
+            display: none;
+        }
       }
       
 
     .our_works__text_block {
         color: #fff;
         padding-top: 110px;
+        @include _sm {
+            padding-top: 20px;
+        }
         .title {            
             @extend %font_bold;
             font-size: 36px;
             color: inherit;
             position: relative;
+            @include _sm {
+                font-size: 18px;
+            }
 
             &::after {
                 position:absolute;
@@ -71,6 +90,9 @@
             color: inherit;
             max-width: 460px;
             margin-top: 30px;
+            @include _sm {
+                font-size: 16px;
+            }
         } 
 
         .points {
@@ -97,18 +119,28 @@
                     @extend %font;
                     font-size: 18px;
                     color: inherit;
+                    @include _sm {
+                        font-size: 14px;
+                    }
                 }
 
                 .text2 {
                     @extend %font_bold;
                     font-size: 24px;
                     color: inherit;
+                    @include _sm {
+                        font-size: 18px;
+                    }
                 }
             }
         }
 
         button {
             margin-top: 50px;
+            @include _sm {
+                margin-top: 20px;
+                transform: scale(.8);
+            }
         }
     }
 
@@ -121,6 +153,10 @@
         border-radius: 8px;
         box-shadow: 4px -4px 8px 0px rgba(67, 67, 67, 0.43);
         overflow: hidden;
+        @include _sm {
+            width: auto;
+            height: auto;
+        }
       }
       
 }

@@ -5,16 +5,28 @@
     background-repeat: no-repeat;
     background-position: center;
     min-height: 905px;
+    @include _sm {
+        min-height: 500px;
+    }
 }
 
 .bplan {
     padding-top: 100px;
     position: relative;
 
+    @include _sm {
+        padding-top: 10px;
+    }    
+
     .title {
         @extend %font_bold;
         font-size: 36px;
         color: #fff;
+        
+        @include _sm {
+            font-size: 18px;
+            text-align: center;
+        }
     }
 
     ul {
@@ -29,6 +41,13 @@
             line-height: 24px;
             color: #fff;
             margin-top: 30px;
+
+            @include _sm {
+                font-size: 11px;
+                line-height: 14px;
+                color: #fff;
+                margin-top: 14px;
+            }
 
             &::before {
                 content: "01";
@@ -58,6 +77,12 @@
         position: absolute;
         top: 550px;
         left: 800px;
+        @include _sm {
+            top: auto;
+            bottom: -60px;
+            left: 100px;
+            transform: scale(.6);
+        }
     }
 
 }

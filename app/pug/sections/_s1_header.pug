@@ -1,23 +1,27 @@
 .header
-    .header__logo 
-    .header__description
-        | Разрабатываем бизнес-планы с 2015 года 
-    .header__buttons 
-        .header__buttons_telegram 
-        .header__buttons_whatsup
-        .header__buttons_phone
-    .header__address
-        .header__address__text
-            |г. Нур-Султан, ул. Циолковского 4
-            a(href="#") Смотреть на карте 
-    .header__phone 
-        .header__phone__text
-            |+7 (702) 286-58-26
-        a(href="#") Заказать звонок
-    .header__email   
-        .header__email__text
-            |work@biz-plan.kz
-        a(href="#") Задать вопрос
+    .header__block
+        .header__logo 
+        .header__description
+            | Разрабатываем бизнес-планы с 2015 года 
+        .header__buttons 
+            .header__buttons_telegram 
+            .header__buttons_whatsup
+    .header__block
+        .header__contacts__item
+            .icon.map
+            .text
+                |г. Нур-Султан, ул. Циолковского 4
+                a(href="#") Смотреть на карте 
+        .header__contacts__item
+            .icon.phone
+            .text
+                |+7 (702) 286-58-26
+                a(href="#") Заказать звонок
+        .header__contacts__item
+            .icon.mail
+            .text
+                |work@biz-plan.kz
+                a(href="#") Задать вопрос
 .line_container
     .line
 .header_menu

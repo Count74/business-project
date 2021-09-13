@@ -15,6 +15,11 @@
             font-size: 20px;
             padding: 36px;
             text-transform: uppercase;
+
+            @include _sm {
+                font-size: 14px;
+                padding: 16px 36px 16px 16px;
+            }
         }
 
         .answer {
@@ -22,6 +27,10 @@
             @extend %font;
             font-size: 14px;
             padding: 0 36px 36px;
+            @include _sm {
+                font-size: 12px;
+                padding: 0 16px 16px;
+            }
         }
 
         .nav {
@@ -33,6 +42,9 @@
             top: 40px;
             width: 26px;
             height: 26px;
+            @include _sm {
+                top: 25px
+            }
             
             &::before {
                 content: "+";
@@ -61,6 +73,10 @@
             top: 40px;
             width: 26px;
             height: 26px;
+
+            @include _sm {
+                top: 25px
+            }
             
             &::before {
                 content: "-";

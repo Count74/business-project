@@ -2,8 +2,14 @@
     display: flex;
     justify-content: space-between;
     margin-top: 40px;
+    @include _sm {
+        flex-wrap: wrap;
+    }
 
     .team__item {
+        @include _sm {
+            margin-top: 20px;
+        }
 
         .photo {
             border-radius: 50%;

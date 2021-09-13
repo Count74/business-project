@@ -3,18 +3,30 @@
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 80px;
+    @include _sm {
+        flex-direction: column;
+    }
 
     .director__photo {
         background: url($images + "director.jpg") no-repeat top;
         min-width: 506px;
         height: 570px;
         display: block;
+
+        @include _sm {
+            min-width: 300px;
+            height: 230px;
+            background-size: 70%;
+        }
     }
 
     .director__text_block{
         position: relative;
         margin-top: 30px;
         max-width: 614px;
+        @include _sm {
+            margin-top: 0px;
+        }
 
         .quote{
             @extend %font_Georgia;
@@ -23,39 +35,74 @@
             position: absolute;
             top: 10px;
             right: 20px;
+
+            @include _sm {
+                display: none;
+            }
         }
 
         .name {
             @extend %font_bold;
             font-size: 36px;
+
+            @include _sm {
+                font-size: 18px;
+                margin-left: 40px;
+            }
         }
 
         .position {
             @extend %font_semibold;
             font-size: 18px;
             margin: 24px 0 30px;
+
+            
+            @include _sm {
+                font-size: 12px;
+                margin: 0px 0 10px 40px;
+            }
         }
 
         .description {
             @extend %font;
             font-style: 15px;
+            @include _sm {
+                font-size: 12px;
+                margin: 0 20px 0 20px;
+            }
         }
 
         .title {
             @extend %font_bold;
             font-size: 30px;
             margin: 30px 0 20px;
+
+            @include _sm {
+                font-size: 15px;
+                margin: 10px 20px 0 20px;
+                text-align: center;
+            }
         }
 
         .request_form {
             display: flex;
             justify-content: space-evenly;
+            
+            @include _sm {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
         }
 
         .form {
+
             input {
                 display: block;
                 margin: 20px 0;
+                @include _sm {
+                    margin: 10px;
+                }
             }
 
             input.phone {
@@ -67,15 +114,29 @@
                 height: 54px;
                 border-radius: 54px;
                 padding-left: 10px;
+
+                @include _sm {
+                    min-width: 120px;
+                    height: 26px;
+                    font-size: 12px;
+                }
             }
 
             input.orange {
                 min-width: 305px;
+                @include _sm {
+                    min-width: 150px;
+                    height: 26px;
+                    font-size: 12px;
+                }
             }
         }
 
         .callus{
             margin-top: 40px;
+            @include _sm {
+                margin-top: 20px;
+            }
             .text {
                 @extend %font_medium;
                 font-size: 18px;

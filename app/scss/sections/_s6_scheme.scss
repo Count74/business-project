@@ -2,11 +2,18 @@
     display: flex;
     // justify-content: flex-start;
     margin-bottom: 50px;
+    
+    @include _sm {
+        flex-wrap: wrap;
+    }
 }
 
 .scheme_item {
     width: 174px;
     margin-right: 20px;
+    @include _sm {
+        margin-left: 20px;
+    }
 
     .scheme_item__number {
         position: relative;

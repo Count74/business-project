@@ -6,6 +6,19 @@
 
     @include _lg {
         flex-direction: column;
+        align-items: flex-start;
+
+        .header__block {
+            justify-content: flex-start;
+            margin-bottom: 20px;
+        }
+    }
+
+    @include _sm {
+        align-items: center;
+        .header__block {
+            justify-content: center;
+        }
     }
 
     .header__logo{
@@ -21,6 +34,10 @@
         line-height: 18px;
         max-width: 150px;
         margin: 0 0 0 22px;
+        
+        @include _sm {
+            margin-top: 6px;
+        }
     }
 
     .header__round_btn {
@@ -36,18 +53,23 @@
         align-items: flex-start;
         justify-content: space-between;
         align-self: flex-start;
-        
+
+        @include _sm {
+            margin-top: 6px;
+            align-self: center;
+        }
+
         .header__buttons_telegram {
             background-image: url($svg + "telegram.svg");
             width: 29px;
             height: 29px;
-            margin: 0 12px;
+            margin: 0 6px;
         }
         .header__buttons_whatsup {
             background-image: url($svg + "whatsup.svg");
             width: 29px;
             height: 29px;
-            margin: 0 12px;
+            margin: 0 6px;
         }
         .header__buttons_phone{
             @extend .header__round_btn;
@@ -66,65 +88,60 @@
         text-decoration: underline;
         line-height: 1.2;
         margin-top: 10px;
+        
+        @include _sm {
+            text-align: center;
+        }
     }
 
-    .header__address,
-    .header__email,
-    .header__phone
-     {
-        @extend %font_semibold;
-        font-size: 17px;
-        color: rgb(48, 48, 48);
-        line-height: 1.2;
-    }
-    .header__phone {      
-        a {
-            margin-left: 50px;
-        }  
+    .header__block  {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
 
-        .header__phone__text{
-            display: flex;
+        @include _sm {
+            // flex-direction: column;
+            flex-wrap: wrap;
             align-items: center;
-
-            &::before{
-                content: ' ';
-                display: block;
-                @extend .header__round_btn;
-                background-image: url($svg + "phone.svg");
-                background-position: center center;
-                background-repeat: no-repeat;
-                margin: 0 12px;
-            }
+            justify-content: center;
         }
-    }
 
-    .header__email {     
-        a {
-            margin-left: 40px;
-        }   
-        .header__email__text {
+        .header__contacts__item {
             display: flex;
-       
-            &::before {
-                content: ' ';
-                display: block;
-                height: 12px;
-                width: 15px;
-                background-image: url($svg + "email.svg");
-                background-position: center center;
-                background-repeat: no-repeat;
-                margin: 6px 12px;
+            align-items: flex-start;
+            padding: 6px;
+
+            .icon {
+                border-radius: 50%;
+                background-color: rgb(255, 255, 255);
+                box-shadow: 0px 8px 13px 0px rgba(0, 0, 0, 0.14);
+                width: 29px;
+                height: 29px;
+            }
+
+           .icon.phone {
+                background: #fff url($images + "bottom_phone.png") no-repeat center;
+            }
+
+            .icon.mail {
+                background: #fff url($images + "bottom_mail.png") no-repeat center;
+            }
+
+            .icon.map {
+                background: #fff url($images + "bottom_map.png") no-repeat center;
+            }
+
+            .text {
+                @extend %font_semibold;
+                font-size: 17px;
+                color: rgb(48, 48, 48);
+                line-height: 1.2;
+                margin-left: 10px;
             }
         }
     }
 
-    .header__round_btn {
-            border-radius: 50%;
-            background-color: rgb(255, 255, 255);
-            box-shadow: 0px 8px 13px 0px rgba(0, 0, 0, 0.14);
-            width: 29px;
-            height: 29px;
-     }
+    
 }
 
 .line_container {
@@ -146,6 +163,7 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
+        flex-wrap: wrap;
         list-style: none;
         margin: 0;
         padding: 0;
