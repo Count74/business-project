@@ -1,0 +1,50 @@
+.left_sidebar_page {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 30px;
+
+    .left_sidebar {
+        margin: 0 25px 20px 15px;
+        width: 270px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 5px;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.08);
+        @include _sm {
+            display: none;
+        }
+          
+
+        .title {
+            background-image: linear-gradient( 126deg, rgb(63,103,63) 0%, rgb(157,188,100) 100%);
+            width: 270px;
+            height: 50px;
+            @extend %font_bold;
+            font-size: 18px;
+            color: #fff;
+            padding: 14px 0 0 18px;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .sidebar__item {
+            padding: 6px 10px 6px 18px;
+            border-top: 1px solid #d7dfe7;
+
+            a {
+                @extend %font;
+                font-size: 15px;
+                color: rgb(43, 43, 43);
+                line-height: 1.2;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+              }
+              
+        }
+          
+    }
+
+}

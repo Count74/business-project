@@ -16,6 +16,9 @@
 @import 'sections/s10_clients';
 @import 'sections/s11_qa';
 @import 'sections/s12_footer';
+@import 'sections/sidebars';
+@import 'sections/contacts';
+@import 'sections/download';
 
 body {
     background-color: #f8f8f8;
@@ -43,6 +46,27 @@ h2 {
     max-width: 1170px;
     margin: 0 auto;
     padding: 6px;
+}
+
+.content {
+    @extend %font;
+    font-size: 14px;
+
+    h1 {
+        @extend %font_bold;
+        font-size: 48px;
+        margin: 10px 0;
+    }
+
+    h2 {
+        @extend %font_bold;
+        font-size: 30px;
+        margin: 8px 0;
+        text-align: left;
+        &::after {
+            display: none;
+        }
+    }
 }
 
 .lighter_bg {

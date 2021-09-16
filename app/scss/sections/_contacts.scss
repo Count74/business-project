@@ -1,0 +1,176 @@
+.contacts {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    @include _sm {
+        flex-direction: column-reverse;
+    }
+
+    .contacts_map {
+        max-width: 745px;
+        max-height: 555px;
+        width: 100%;
+        min-height: 555px;
+        background: url($images + "map.jpg") no-repeat;
+        background-size: contain;
+        display: block;
+        margin: 10px;
+        @include _sm {
+            min-height: 255px;
+        }
+    }
+
+    .contacts_text {
+        max-width: 316px;
+    }
+
+    .title {
+        @extend %font_bold;
+        font-size: 30px;
+        margin: 30px 0 10px;
+
+        @include _sm {
+            font-size: 15px;
+            margin: 10px 20px 0 20px;
+            text-align: center;
+        }
+    }
+
+    .title {
+        @extend %font_bold;
+        font-size: 30px;
+        margin: 30px 0 20px;
+
+        @include _sm {
+            font-size: 15px;
+            margin: 10px 20px 0 20px;
+            text-align: center;
+        }
+    }
+
+    .request_form {
+        display: flex;
+        justify-content: space-evenly;
+        
+        @include _sm {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .form {
+
+        input {
+            display: block;
+            margin: 20px 0;
+            @include _sm {
+                margin: 10px;
+            }
+        }
+
+        input.phone {
+            border-width: 1px;
+            border-color: rgb(204, 204, 204);
+            border-style: solid;
+            background-color: rgb(255, 255, 255);
+            min-width: 280px;
+            height: 54px;
+            border-radius: 54px;
+            padding-left: 10px;
+
+            @include _sm {
+                min-width: 120px;
+                height: 26px;
+                font-size: 12px;
+            }
+        }
+
+        input.orange {
+            min-width: 280px;
+            @include _sm {
+                min-width: 150px;
+                height: 26px;
+                font-size: 12px;
+            }
+        }
+    }
+
+    .callus{
+        margin-top: 40px;
+        @include _sm {
+            margin-top: 20px;
+        }
+        .text {
+            @extend %font_medium;
+            font-size: 18px;
+            text-align: center;
+          }
+
+          .phone{
+            @extend %font_bold;
+            font-size: 24px;
+            text-align: center;
+          }
+
+          .text2 {
+            @extend %font;
+            font-size: 14px;
+            text-align: center;
+          }
+    }
+}
+
+.address {
+    position: relative;
+
+    .address__text {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 15px;
+
+        .icon {
+            border-radius: 50%;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0px 8px 13px 0px rgba(0, 0, 0, 0.14);
+            width: 29px;
+            height: 29px;
+          }
+          
+        .icon.phone {
+              background: #fff url($images + "bottom_phone.png") no-repeat center;
+        }
+
+        .icon.mail {
+            background: #fff url($images + "bottom_mail.png") no-repeat center;
+        }
+
+        .icon.map {
+            background: #fff url($images + "bottom_map.png") no-repeat center;
+        }
+
+        .icon.clock {
+            background: #fff url($images + "clock.png") no-repeat center;
+        }
+
+        .text {
+            margin-left: 12px;
+            @extend %font_semibold;
+            font-size: 17px;
+
+            a {
+                display: block;
+                @extend %font_medium;
+                font-size: 15px;
+                color: rgb(255, 78, 0);
+                text-decoration: underline;
+                line-height: 1.2;
+                margin-top: 6px;
+                margin-bottom: 14px;
+            }
+        }
+
+    }
+
+}

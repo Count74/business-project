@@ -1,0 +1,52 @@
+.download_bp__cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+
+    .card {
+        border-radius: 5px;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.08);
+        width: 270px;
+        min-height: 468px;
+        margin: 6px;
+
+          
+        .image {
+            width: 270px;
+            height: 204px;
+            overflow: hidden;
+            img {
+                width: 270px;
+            }
+        }
+
+        .title {
+            @extend %font_bold;
+            font-size: 18px;
+            line-height: 1.2;
+            padding: 10px 10px 0 10px;
+        }
+
+        .text {
+            @extend %font;
+            font-size: 13px;
+            padding: 10px;
+        }
+
+        .link {
+            text-align: right;
+        
+            a {
+                @extend %font_medium;
+                font-size: 15px;
+                color: rgb(255, 78, 0);
+                text-decoration: underline;
+                line-height: 1.2;
+                padding: 10px;
+            }            
+        }
+
+    }
+}

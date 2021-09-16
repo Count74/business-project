@@ -1,0 +1,32 @@
+.container
+    h1 Контакты
+    .contacts 
+        .contacts_text 
+            .address
+                .address__text
+                    .icon.map
+                    .text
+                        |г. Нур-Султан, ул. Циолковского 4
+                .address__text
+                    .icon.phone
+                    .text
+                        |+7 (702) 286-58-26
+                        br
+                        |+7 (702) 286 5826
+                .address__text
+                    .icon.mail
+                    .text
+                        |work@biz-plan.kz
+                .address__text
+                    .icon.clock
+                    .text
+                        |пн-пт: с 10:00 до 19:00
+                        br
+                        |сб: с 10:00 до 15:00
+            .title Есть вопросы ?
+            .text Оставьте свой номер телефона и наш менеджер свяжется с вами в течении 5 минут
+            .request_form 
+                .form
+                    input.phone(id="phone1" type="text" placeholder="+7(___)___-__-__")
+                    input.orange(type="submit" value="Заказать звонок")
+        .contacts_map 
