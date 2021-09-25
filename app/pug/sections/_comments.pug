@@ -1,0 +1,63 @@
+#reviews.woocommerce-Reviews
+  #comments
+    h2.woocommerce-Reviews-title
+      | 1 &ocy;&tcy;&zcy;&ycy;&vcy; &ncy;&acy; 
+      span &Ocy;&rcy;&gcy;&acy;&ncy;&icy;&zcy;&acy;&tscy;&icy;&yacy; &kcy;&acy;&rcy;&shcy;&iecy;&rcy;&icy;&ncy;&gcy;&acy;
+    ol.commentlist
+      li#li-comment-2.review.byuser.comment-author-admin_business.bypostauthor.even.thread-even.depth-1
+        #comment-2.comment_container
+          img.avatar.avatar-60.photo(alt='' src='http://1.gravatar.com/avatar/4c4cf0f15614db8290fc50f393e06f41?s=60&d=mm&r=g' srcset='http://1.gravatar.com/avatar/4c4cf0f15614db8290fc50f393e06f41?s=120&d=mm&r=g 2x' height='60' width='60' loading='lazy')
+          .comment-text
+            .star-rating(role='img' aria-label='Оценка 4 из 5')
+              span(style='width:80%')
+                | &Ocy;&tscy;&iecy;&ncy;&kcy;&acy; 
+                strong.rating 4
+                |  &icy;&zcy; 5
+            p.meta
+              strong.woocommerce-review__author admin_business 
+              span.woocommerce-review__dash &ndash;
+              time.woocommerce-review__published-date(datetime='2021-09-23T05:29:01+03:00') 23.09.2021
+            .description
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin at mauris gravida, laoreet dui at, faucibus ipsum. Nulla sit amet nisl scelerisque, feugiat nibh sagittis, pharetra neque. Quisque ultricies ipsum ac lacus cursus vestibulum auctor quis lectus. Cras id porta magna. Proin molestie, nunc sed hendrerit sollicitudin, orci ex hendrerit quam, et consectetur tellus justo et nisi. Maecenas aliquam ipsum eu pretium maximus. Sed maximus accumsan erat quis porta. Integer eleifend nec dolor et maximus.
+      // #comment-##
+  #review_form_wrapper
+    #review_form
+      #respond.comment-respond
+        span#reply-title.comment-reply-title
+          | &Dcy;&ocy;&bcy;&acy;&vcy;&icy;&tcy;&softcy; &ocy;&tcy;&zcy;&ycy;&vcy; 
+          small
+            a#cancel-comment-reply-link(rel='nofollow' href='/business/product/organizacziya-karsheringa/#respond' style='display:none;') &Ocy;&tcy;&mcy;&iecy;&ncy;&icy;&tcy;&softcy; &ocy;&tcy;&vcy;&iecy;&tcy;
+        form#commentform.comment-form(action='http://localhost/business/wp-comments-post.php' method='post' novalidate='')
+          .comment-form-rating
+            label(for='rating')
+              | &Vcy;&acy;&shcy;&acy; &ocy;&tscy;&iecy;&ncy;&kcy;&acy;&nbsp;
+              span.required *
+            p.stars
+              span
+                a.star-1(href='#') 1
+                a.star-2(href='#') 2
+                a.star-3(href='#') 3
+                a.star-4(href='#') 4
+                a.star-5(href='#') 5
+            select#rating(name='rating' required='' style='display: none;')
+              option(value='') &Ocy;&tscy;&iecy;&ncy;&kcy;&acy;&mldr;
+              option(value='5') &Ocy;&tcy;&lcy;&icy;&chcy;&ncy;&ocy;
+              option(value='4') &KHcy;&ocy;&rcy;&ocy;&shcy;&ocy;
+              option(value='3') &Scy;&rcy;&iecy;&dcy;&ncy;&iecy;
+              option(value='2') &Ncy;&iecy;&pcy;&lcy;&ocy;&khcy;&ocy;
+              option(value='1') &Ocy;&chcy;&iecy;&ncy;&softcy; &pcy;&lcy;&ocy;&khcy;&ocy;
+          p.comment-form-comment
+            label(for='comment')
+              | &Vcy;&acy;&shcy; &ocy;&tcy;&zcy;&ycy;&vcy;&nbsp;
+              span.required *
+            textarea#comment(name='comment' cols='45' rows='8' required='')
+          p.form-submit
+            input#submit.submit(name='submit' type='submit' value='Отправить')
+            input#comment_post_ID(type='hidden' name='comment_post_ID' value='79')
+            input#comment_parent(type='hidden' name='comment_parent' value='0')
+          input#_wp_unfiltered_html_comment_disabled(type='hidden' name='_wp_unfiltered_html_comment' value='0bb4bb5d91')
+          script.
+            (function(){if(window===window.parent){document.getElementById('_wp_unfiltered_html_comment_disabled').name='_wp_unfiltered_html_comment';}})();
+      // #respond
+  .clear

@@ -31,9 +31,10 @@
 
     .header__description {
         @extend %font_medium;
+        font-size: 14px;
         line-height: 18px;
-        max-width: 150px;
-        margin: 0 0 0 22px;
+        max-width: 120px;
+        margin: 0 20px 0 22px;
         
         @include _sm {
             margin-top: 6px;

@@ -19,6 +19,9 @@
 @import 'sections/sidebars';
 @import 'sections/contacts';
 @import 'sections/download';
+@import 'sections/articles';
+@import 'sections/woocommerce';
+@import 'sections/product_remark';
 
 body {
     background-color: #f8f8f8;
@@ -40,6 +43,10 @@ h2 {
         content: " ";
         display: block;
     }
+}
+
+a {
+    color: $green;
 }
 
 .container {
@@ -80,7 +87,8 @@ h2 {
 }
 
 button.orange,
-input.orange {
+input.orange,
+a.btn.orange {
     // background: url($images + "orange_btn_line.png") no-repeat;
     background-image: url($images + "orange_btn_line.png") , linear-gradient( 90deg, rgb(254,81,3) 0%, rgb(243,125,73) 100%),;
     background-repeat: no-repeat, no-repeat;

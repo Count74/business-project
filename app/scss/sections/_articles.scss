@@ -1,0 +1,108 @@
+.post__block {
+    display: flex;
+    justify-content: flex-start;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.08);
+    max-width: 850px;
+    margin-bottom: 26px;
+      
+
+
+    .post__image {
+        width: 270px;
+        margin: 0 20px 0 0;
+        position: relative;
+        border-radius: 5px 0 0 0;
+
+        img {
+            border-radius: 5px 0 0 0;
+            max-width: 270px;
+        }
+
+        .date {
+            position: absolute;
+            border-radius: 5px;
+            background-color: rgb(142, 178, 76);
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            width: 50px;
+            height: 50px;
+            z-index: 2;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+            .day {
+                text-align: center;
+                @extend %font_bold;
+                font-size: 18px;
+                display: inline-block;
+                color: white;
+                line-height: 1;
+            }
+
+            .month_year {
+                text-align: center;
+                @extend %font_medium;
+                font-size: 13px;
+                display: inline-block;
+                color: white;
+            }
+          }
+          
+    }
+    .post__text_block {
+        .post__text_block__meta{
+            margin-right: 10px;
+            border-bottom: 1px solid #d6d6d6;
+            display: flex;
+
+            .post__text_block__meta_counter {
+                background: url($svg + "eye.svg") no-repeat left center;
+                padding: 10px 24px;
+                @extend %font;
+                font-size: 14px;
+            }
+
+            .post__text_block__meta_time {
+                margin-left: 20px;
+                background: url($svg + "clock.svg") no-repeat left center;
+                padding: 10px 24px;
+                @extend %font;
+                font-size: 14px;
+            }
+
+        }
+
+        .post__text_block__text{
+            h2.entry-title {
+                text-align: left;
+                margin: 0;
+                
+                &::after {
+                    display: none;
+                }
+
+                a {
+                    @extend %font_bold;
+                    font-size: 22px;
+                    color: $color_text;
+                    text-decoration: none;
+                }
+            }
+            a {
+                display: block;
+                @extend %font_medium;
+                font-size: 15px;
+                color: rgb(255, 78, 0);
+                text-decoration: underline;
+                line-height: 1.2;
+                margin: 10px 0;
+            }
+        }
+    }
+}

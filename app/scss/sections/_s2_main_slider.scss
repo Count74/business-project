@@ -3,6 +3,34 @@
     justify-content: space-between;
     align-items: flex-start;
     margin-top: 70px;
+    position: relative;
+
+    .main_slider__nav {
+        position: absolute;
+        display: flex;
+        left: 0px;
+        bottom:60px;
+
+        @include _lg {
+            left: 0px;
+            bottom: 6px;
+        }
+
+        .nav_element {
+            display: block;
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            border: 1px solid #365335;
+            margin-left: 19px;
+        }
+
+        .nav_element.active {
+            width: 43px;
+            border-radius: 6px;
+            background: #365335;
+        }
+    }
 
     @include _lg {
         flex-direction: column-reverse;
@@ -33,7 +61,7 @@
         }
 
         .description {
-            @extend %font_bold;
+            @extend %font_semibold;
             font-size: 30px;
             line-height: 1.2;
             max-width: 395px;

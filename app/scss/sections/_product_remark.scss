@@ -1,0 +1,32 @@
+.product_remark {
+    background-color: #eef4ff;
+    width: 100%;      
+    margin: 20px 0;
+    border-radius: 6px;
+    .product_remark__header {
+        display: flex;
+        align-items: center;
+        padding: 16px 28px 10px;
+
+        .anounce {
+            @extend %font_medium;
+            font-size: 16px;
+            margin-right: 26px;
+        }
+        .image {
+            margin-right: 15px;
+        }
+
+        .text {
+            margin-right: 17px;
+            @extend %font;
+            font-size: 13px;
+        }
+    }
+
+    .product_remark__main {
+        padding: 0px 28px 16px;
+        @extend %font;
+        font-size: 13px;
+    }
+}
