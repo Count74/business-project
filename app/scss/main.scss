@@ -23,9 +23,6 @@
 @import 'sections/woocommerce';
 @import 'sections/product_remark';
 
-body {
-    background-color: #f8f8f8;
-}
 
 h2 {
     @extend %font_bold;
@@ -75,10 +72,24 @@ a {
         }
     }
 }
-
+.main_background {
+    background-color: #f8f8f8;
+    background-image:  url($images + "bg_element_1.png"), 
+                       url($images + "bg_element_2.png"),
+                       url($images + "bg_element_3.png"),
+                       linear-gradient(0deg, #ffffff 30%, #f8f8f8 70%);
+    background-position:  top 222px right 1920px - 96px,
+                          top 705px right 1815px - 103px,
+                          top 602px left 1618px,
+                          0 0;
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+    z-index: -10;
+    width: 100%;
+}
 .lighter_bg {
     width: 100%;
     background-color: #fcfefe;
+    z-index: -3;
 }
 
 .text {

@@ -85,11 +85,13 @@
     .main_slider__image {
         width: 530px;
         height: 582px;
-        background-image: url($images + "slider_01.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
+        background-image: url($images + "bg_element_4.png"),
+                          url($images + "slider_01.jpg");
+        background-repeat: no-repeat, no-repeat;
+        background-size: auto, auto;
+        background-position: top 40px right -10px, 0 0;
         display: block;
-        z-index: -1;
+        z-index: 1;
 
         @include _sm {
             width: 265px;
@@ -106,24 +108,26 @@
     box-shadow: 0px 8px 35px 0px rgba(0, 0, 0, 0.14);
     max-width: 1140px;
     min-height: 171px;
-    z-index: 1;
+    position: relative;
+    z-index: 3;
 
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: flex-start;
     flex-wrap: wrap;
-    padding: 20px;
+    //padding: 20px 10px;
     margin-bottom: 100px;
 
     .handout {
         display: flex;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: flex-start;
-        max-width: 255px;
-        margin-top: 20px;
+        max-width: 280px;
+        margin: 20px 0 20px 0px;
         .handout__image {
             display: block;
             margin-right: 18px;
+            margin-top: 4px;
         }
 
         .handout__text_block {
@@ -136,8 +140,11 @@
             }
 
             .text {
+                margin-top: 8px;
                 @extend %font;
                 font-size: 14px;
+                font-weight: normal;
+                line-height: 1.3;
             }
         }
     }

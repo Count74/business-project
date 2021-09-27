@@ -28,6 +28,20 @@
             margin-top: 0px;
         }
 
+        .background_elements {
+            position: absolute;
+            background-image: url($images + "director_bg.jpg");
+            display: block;
+            width: 1911px;
+            height: 1075px;
+            top: -500px;
+            left:-900px;
+            z-index: -1;
+            @include _sm {
+                display: none;
+            }
+        }
+
         .quote{
             @extend %font_Georgia;
             font-size: 150px;
@@ -54,7 +68,7 @@
         .position {
             @extend %font_semibold;
             font-size: 18px;
-            margin: 24px 0 30px;
+            margin: 8px 0 30px;
 
             
             @include _sm {
@@ -96,12 +110,18 @@
         }
 
         .form {
-
+            border-right: 1px solid $gray;
+            padding-right: 20px;
             input {
                 display: block;
                 margin: 20px 0;
                 @include _sm {
                     margin: 10px;
+                }
+
+                &:active,
+                &:focus {
+                    outline: none;
                 }
             }
 
@@ -119,6 +139,11 @@
                     min-width: 120px;
                     height: 26px;
                     font-size: 12px;
+                }
+
+                &:active,
+                &:focus {
+                    outline: none;
                 }
             }
 

@@ -9,13 +9,15 @@ html(lang="ru")
     link(rel="icon", type="image/png", sizes="16x16", href="images/favicon-16x16.png")
     link(rel="icon", type="image/png", sizes="32x32", href="images/favicon-32x32.png")
     link(rel="shortcut icon", type="image/x-icon", href="images/favicon.ico")
+    script(defer, src="js/app.min.js")
     title Document
   body
-    .container 
-      include ../sections/_s1_header.pug
-      include ../sections/_s2_main_slider.pug
-      include ../sections/_s3_services.pug
-      include ../sections/_s4_garanty.pug
+    .main_background 
+      .container
+        include ../sections/_s1_header.pug
+        include ../sections/_s2_main_slider.pug
+        include ../sections/_s3_services.pug
+    include ../sections/_s4_garanty.pug
     .lighter_bg
       include ../sections/_s5_business_plan.pug
       include ../sections/_s6_scheme.pug
@@ -25,5 +27,4 @@ html(lang="ru")
       include ../sections/_s10_clients.pug
       include ../sections/_s11_qa.pug
       include ../sections/_s12_footer.pug
-    
-    //- script(defer, src="js/app.min.js")
+      

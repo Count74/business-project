@@ -1,6 +1,6 @@
 const { src, dest, parallel, series, watch } = require('gulp');
 const browserSync = require('browser-sync').create();
-//const sourcemaps = require('gulp-sourcemaps');
+const sourcemaps = require('gulp-sourcemaps');
 const scss = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const cleancss = require('gulp-clean-css');
@@ -40,19 +40,19 @@ function watching() {
 
 function styles() {
   return src('app/scss/main.scss') // Выбираем источник: "app/sass/main.sass" или "app/less/main.less"
-	//.pipe(sourcemaps.init())
+	.pipe(sourcemaps.init())
 	.pipe(scss()) // Преобразуем значение переменной "preprocessor" в функцию
 	.pipe(concat('app.min.css')) // Конкатенируем в файл app.min.js
 	.pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true })) // Создадим префиксы с помощью Autoprefixer
 	.pipe(cleancss( { level: { 1: { specialComments: 0 } }/* , format: 'beautify' */ } )) // Минифицируем стили
-	//.pipe(sourcemaps.write())
+	.pipe(sourcemaps.write())
 	.pipe(dest('app/css/')) // Выгрузим результат в папку "app/css/"
 	.pipe(browserSync.stream()) // Сделаем инъекцию в браузер
 }
 
 // сборка html
 function html() {
-	return src('./app/html/*.html')
+	retusrc('./app/html/*.html')
 		.pipe(fileinclude({ prefix: '@@' }))
 		.pipe(dest('./app/'));
 }
@@ -60,6 +60,7 @@ function html() {
 function scripts() {
 	return src([ // Берём файлы из источников
 		//'node_modules/jquery/dist/jquery.min.js', // Пример подключения библиотеки
+		'node_modules/imask/dist/imask.js',
 		'app/js/script.js', // Пользовательские скрипты, использующие библиотеку, должны быть подключены в конце
 		])
 	.pipe(concat('app.min.js')) // Конкатенируем в один файл

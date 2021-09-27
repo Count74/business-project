@@ -36,7 +36,7 @@
         max-width: 514px;
 
         li {
-            @extend %font_medium;
+            @extend %font;
             font-size: 15px;
             line-height: 24px;
             color: #fff;
@@ -55,11 +55,15 @@
                 @extend %font_bold;
                 font-size: 13px;
                 color: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 border-radius: 50%;
-                padding: 3px 6px;
+                // padding: 4px 0px 3px 8px;
                 margin-right: 20px;
                 float: left;
                 width: 30px;
+                height: 30px;
                 box-shadow: 0 0 0 4px rgba(142, 178, 75, 0.5);
             }
         }
@@ -76,12 +80,17 @@
     .button {
         position: absolute;
         top: 550px;
-        left: 800px;
+        left: 700px;
+            
         @include _sm {
             top: auto;
             bottom: -60px;
             left: 100px;
             transform: scale(.6);
+        }
+        
+        button {
+            width: 314px;
         }
     }
 

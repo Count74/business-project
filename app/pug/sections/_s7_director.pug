@@ -2,6 +2,7 @@
     .director 
         .director__photo 
         .director__text_block
+            .background_elements
             .quote “
             .name Иван Редькин
             .position Директор
@@ -10,7 +11,7 @@
             .title Оставьте заявку и мы Вам перезвоним
             .request_form 
                 .form
-                    input.phone(id="phone1" type="text" placeholder="+7(___)___-__-__")
+                    input.phone(id="phone" type="text" placeholder="+7(___)___-__-__" pattern="[0-9]{3} [0-9]{3} [0-9]{4}")
                     input.orange(type="submit" value="Заказать звонок")
                 .callus
                     .text 

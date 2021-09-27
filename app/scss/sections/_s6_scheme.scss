@@ -15,6 +15,10 @@
         margin-left: 20px;
     }
 
+    // &:last-of-type .scheme_item__number .arrow {
+    //         display: none;
+    // }
+
     .scheme_item__number {
         position: relative;
         display: flex;
@@ -47,6 +51,8 @@
             width: 15px;
             height: 27px;
             display: block;
+            margin-right: 30px;
+            opacity: 1;
         }
     }
 
@@ -66,8 +72,8 @@
                 position:absolute;
                 bottom: -12px;
                 left: 0;
-                width: 70px;
-                border-top: 3px solid #314f30;
+                width: 92px;
+                border-top: 2px solid #314f30;
                 content: " ";
                 display: block;
             }
@@ -76,9 +82,27 @@
         .text {
             @extend %font;
             font-size: 13px;
+
+            strong {
+                display: block;
+                @extend %font_bold;
+                font-size: 12px;
+                line-height: 18px;
+                padding-top: 8px;
+                position: relative;
+                
+                &:before {
+                    content: " ";
+                    background: url($images + "pen_bg.png") no-repeat;
+                    position: absolute;
+                    left: -10px;
+                    top: 0;
+                    width: 77px;
+                    height: 77px;
+                    display: block;
+                }
+            }
           }
-          
-          
     }
 }
 

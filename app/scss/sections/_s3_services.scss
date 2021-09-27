@@ -1,18 +1,25 @@
-.garanty_cards {
+.services_cards {
     margin-top: 30px;
     display: flex;
     justify-content: center;
     align-items: stretch;
     flex-wrap: wrap;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
+    border-width: 1px;
+    border-color: rgb(245, 244, 245);
+    border-style: solid;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 8px 35px 0px rgba(0, 0, 0, 0.08);
+
 
     .card {
         background-color: #fff;
         width: 50%;
         min-height: 284px;
-        padding: 40px 0 40px 40px;
+        padding: 30px 0 10px 40px;
         display: flex;
         justify-content: center;
+        color: #2b2b2b;
 
         @include _sm {
             flex-direction: column;
@@ -27,14 +34,14 @@
         }
 
         .card_icon {
-            margin-bottom: 30px;
+            margin-bottom: 0px;
         }
 
         .card_title {
             @extend %font_bold;
             color: inherit;
             font-size: 20px;
-            margin: 15px 0;
+            margin: 15px 0 5px;
 
             @include _sm {
                 font-size: 14px;
@@ -42,11 +49,15 @@
             }
         }
 
+        .card_title.no_margin {
+            margin-top: 2px;
+        }
+
         .card_text {
             @extend %font;
             color: inherit;
             font-size: 14px;
-            line-height: 1.8;
+            line-height: 22px;
 
             @include _sm {
                 font-size: 10px;
@@ -63,9 +74,21 @@
             align-self: flex-end;
             background-image: url($svg + "right_arrow_gray.svg");
             margin-right: 40px;
+            margin-bottom: 40px;
             background-repeat: no-repeat;
             background-position: center;
             cursor: pointer;
+
+            &:hover {
+                border: 1px solid $orange;
+                background-image: url($svg + "right_arrow_orange.svg");
+                -webkit-filter: drop-shadow( 2px 2px 2px rgba(92, 46, 20, 0.7));
+                filter: drop-shadow( 2px 2px 2px rgba(92, 46, 20, 0.7));
+            }
+
+            &:active {
+                filter: none;
+            }
 
             @include _sm {
                 transform: scale(.6);
@@ -75,7 +98,7 @@
     }
     
     .green {
-        background-image: linear-gradient( 126deg, rgb(63,103,63) 0%, rgb(157,188,100) 100%);
+        background-image: linear-gradient( 126deg, rgb(157,188,100) 0%, rgb(63,103,63) 100%);
         color: #fff;
 
         .arrow_btn {
