@@ -1,10 +1,13 @@
 .scheme {
     display: flex;
-    // justify-content: flex-start;
     margin-bottom: 50px;
+    position: relative;
+    z-index: 2;
     
     @include _sm {
         flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
     }
 }
 
@@ -14,10 +17,6 @@
     @include _sm {
         margin-left: 20px;
     }
-
-    // &:last-of-type .scheme_item__number .arrow {
-    //         display: none;
-    // }
 
     .scheme_item__number {
         position: relative;

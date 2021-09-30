@@ -265,7 +265,6 @@
         <div class="director"> 
           <div class="director__photo"> </div>
           <div class="director__text_block">
-            <div class="background_elements"></div>
             <div class="quote">“</div>
             <div class="name">Иван Редькин</div>
             <div class="position">Директор</div>
@@ -284,10 +283,11 @@
               </div>
             </div>
           </div>
+          <div class="background_elements"></div>
         </div>
       </div>
       <div class="container"> 
-        <h2>Кто будет работать над вашим проектом </h2>
+        <h2 class="z-index2">Кто будет работать над вашим проектом </h2>
         <div class="team"> 
                 <div class="team__item">
                   <div class="photo"><img src="images/team_01.jpg"></div>
@@ -306,12 +306,12 @@
                 </div>
                 <div class="team__item">
                   <div class="photo"><img src="images/team_04.jpg"></div>
-                  <div class="name">Дмитрий Грохольский</div>
+                  <div class="name">Ирина Михайлова</div>
                   <div class="position">Маркетолог</div>
                 </div>
                 <div class="team__item">
                   <div class="photo"><img src="images/team_05.jpg"></div>
-                  <div class="name">Бауыржан Калменов</div>
+                  <div class="name">Дмитрий Грохольский</div>
                   <div class="position">Экономист</div>
                 </div>
         </div>
@@ -331,24 +331,34 @@
               <div class="points"> 
                 <div class="point">
                   <div class="text1">Регион</div>
-                  <div class="text2">Акмолинская обл.</div>
+                  <div class="text2 area">Акмолинская обл.</div>
                 </div>
                 <div class="point">
                   <div class="text1">Сумма инвестиций</div>
-                  <div class="text2">120 тыс. ₸</div>
+                  <div class="text2"> <span class="number">120 </span>тыс. ₸</div>
                 </div>
                 <div class="point">
                   <div class="text1">Количество страниц</div>
-                  <div class="text2">64 страниц</div>
+                  <div class="text2"> <span class="number">64 </span>страниц</div>
                 </div>
                 <div class="point">
                   <div class="text1">Срок</div>
-                  <div class="text2">12 дней</div>
+                  <div class="text2"> <span class="number">12 </span>дней</div>
                 </div>
               </div>
               <button class="orange">Смотреть все проекты</button>
             </div>
-            <div class="our_work__slider"><img src="images/work_slilder_1.jpg"></div>
+            <div class="our_work__slider">
+              <div class="our_work__slider__image_wraper"><img src="images/work_slilder_1.jpg"></div>
+              <div class="nav_block">
+                <div class="nav_element"> 
+                  <div class="left"></div>
+                </div>
+                <div class="nav_element">
+                  <div class="right"></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -360,45 +370,93 @@
             <div class="text">Также помимо подготовки проектов в государственные структуры, мы успешно разрабатываем бизнес-планы и ТЭО для кредитования в банки второго уровня по всему Казахстану</div>
           </div>
           <div class="clients__sliders">
-            <div class="client_slider"> 
-                    <div class="client_slider__item"> 
-                      <div class="image"><img src="images/сlient_01.png"></div>
-                      <div class="client_title">ДАМУ</div>
-                    </div>
-                    <div class="client_slider__item"> 
-                      <div class="image"><img src="images/сlient_02.png"></div>
-                      <div class="client_title">СПК-АСТАНА</div>
-                    </div>
-                    <div class="client_slider__item"> 
-                      <div class="image"><img src="images/сlient_03.png"></div>
-                      <div class="client_title">АКИМАТ Г. НУР-СУЛТАН</div>
-                    </div>
-                    <div class="client_slider__item"> 
-                      <div class="image"><img src="images/сlient_04.png"></div>
-                      <div class="client_title">АО «Аграрная кредитная корпорация</div>
-                    </div>
+            <div class="client_slider_wrapper">
+              <div class="client_slider">
+                <div class="client_slider__block">
+                        <div class="client_slider__item"> 
+                          <div class="image"><img src="images/сlient_01.png"></div>
+                          <div class="client_title">ДАМУ</div>
+                        </div>
+                        <div class="client_slider__item"> 
+                          <div class="image"><img src="images/сlient_02.png"></div>
+                          <div class="client_title">СПК-АСТАНА</div>
+                        </div>
+                        <div class="client_slider__item"> 
+                          <div class="image"><img src="images/сlient_03.png"></div>
+                          <div class="client_title">АКИМАТ Г. НУР-СУЛТАН</div>
+                        </div>
+                        <div class="client_slider__item"> 
+                          <div class="image"><img src="images/сlient_04.png"></div>
+                          <div class="client_title">АО «Аграрная кредитная корпорация</div>
+                        </div>
+                </div>
+                <div class="client_slider__block">
+                        <div class="client_slider__item"> 
+                          <div class="image"><img src="images/сlient_1_05.png"></div>
+                          <div class="client_title">АО «БРК-Лизинг»</div>
+                        </div>
+                        <div class="client_slider__item"> 
+                          <div class="image"><img src="images/сlient_1_06.png"></div>
+                          <div class="client_title">СЭЗ «Астана-Технополис»</div>
+                        </div>
+                        <div class="client_slider__item"> 
+                          <div class="image"><img src="images/сlient_1_07.png"></div>
+                          <div class="client_title">АО «НАТР»</div>
+                        </div>
+                        <div class="client_slider__item"> 
+                          <div class="image"><img src="images/сlient_1_08.png"></div>
+                          <div class="client_title">НУХ «Байтерек»</div>
+                        </div>
+                </div>
+              </div>
               <div class="slider_nav">
                 <div class="bar active"> </div>
                 <div class="bar"></div>
               </div>
             </div>
-            <div class="client_slider"> 
-                    <div class="client_slider__item"> 
-                      <div class="image"><img src="images/сlient_05.png"></div>
-                      <div class="client_title">Jusan Bank</div>
-                    </div>
-                    <div class="client_slider__item"> 
-                      <div class="image"><img src="images/сlient_06.png"></div>
-                      <div class="client_title">Halyk Bank</div>
-                    </div>
-                    <div class="client_slider__item"> 
-                      <div class="image"><img src="images/сlient_07.png"></div>
-                      <div class="client_title">Альфа-Банк</div>
-                    </div>
-                    <div class="client_slider__item"> 
-                      <div class="image"><img src="images/сlient_08.png"></div>
-                      <div class="client_title">АТФ Банк</div>
-                    </div>
+            <div class="client_slider_wrapper">
+              <div class="client_slider">
+                <div class="client_slider__block">
+                        <div class="client_slider__item"> 
+                          <div class="image"><img src="images/сlient_05.png"></div>
+                          <div class="client_title">Jusan Bank</div>
+                        </div>
+                        <div class="client_slider__item"> 
+                          <div class="image"><img src="images/сlient_06.png"></div>
+                          <div class="client_title">Halyk Bank</div>
+                        </div>
+                        <div class="client_slider__item"> 
+                          <div class="image"><img src="images/сlient_07.png"></div>
+                          <div class="client_title">Альфа-Банк</div>
+                        </div>
+                        <div class="client_slider__item"> 
+                          <div class="image"><img src="images/сlient_08.png"></div>
+                          <div class="client_title">АТФ Банк</div>
+                        </div>
+                </div>
+                <div class="client_slider__block">
+                        <div class="client_slider__item"> 
+                          <div class="image"><img src="images/сlient_2_05.png"></div>
+                          <div class="client_title">ForteBank</div>
+                        </div>
+                        <div class="client_slider__item"> 
+                          <div class="image"><img src="images/сlient_2_06.png"></div>
+                          <div class="client_title">Банк «ЦентрКредит»</div>
+                        </div>
+                        <div class="client_slider__item"> 
+                          <div class="image"><img src="images/сlient_2_07.png"></div>
+                          <div class="client_title">Сбербанк</div>
+                        </div>
+                        <div class="client_slider__item"> 
+                          <div class="image"><img src="images/сlient_2_08.png"></div>
+                          <div class="client_title">Eurasian Bank</div>
+                        </div>
+                </div>
+              </div>
+              <div class="slider_nav">
+                <div class="bar active"> </div>
+                <div class="bar"></div>
+              </div>
             </div>
           </div>
         </div>

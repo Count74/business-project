@@ -13,16 +13,28 @@
                 .points 
                     .point
                         .text1 Регион
-                        .text2 Акмолинская обл.
+                        .text2.area Акмолинская обл.
                     .point
                         .text1 Сумма инвестиций
-                        .text2 120 тыс. ₸
+                        .text2 
+                            span.number 120 
+                            |тыс. ₸
                     .point
                         .text1 Количество страниц
-                        .text2 64 страниц
+                        .text2 
+                            span.number 64 
+                            |страниц
                     .point
                         .text1 Срок
-                        .text2 12 дней
+                        .text2 
+                            span.number 12 
+                            |дней
                 button.orange Смотреть все проекты
             .our_work__slider
-                img(src="images/work_slilder_1.jpg")
+                .our_work__slider__image_wraper
+                    img(src="images/work_slilder_1.jpg")
+                .nav_block
+                    .nav_element 
+                        .left
+                    .nav_element
+                        .right

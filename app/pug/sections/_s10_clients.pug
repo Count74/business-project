@@ -22,17 +22,34 @@ mixin client_item(id, title)
                 |государственных программ
             .text Также помимо подготовки проектов в государственные структуры, мы успешно разрабатываем бизнес-планы и ТЭО для кредитования в банки второго уровня по всему Казахстану
         .clients__sliders
-            .client_slider 
-                +client_item("01", "ДАМУ")
-                +client_item("02", "СПК-АСТАНА")
-                +client_item("03", "АКИМАТ Г. НУР-СУЛТАН")
-                +client_item("04", "АО «Аграрная кредитная корпорация")
+            .client_slider_wrapper
+                .client_slider
+                    .client_slider__block
+                        +client_item("01", "ДАМУ")
+                        +client_item("02", "СПК-АСТАНА")
+                        +client_item("03", "АКИМАТ Г. НУР-СУЛТАН")
+                        +client_item("04", "АО «Аграрная кредитная корпорация")
+                    .client_slider__block
+                        +client_item("1_05", "АО «БРК-Лизинг»")
+                        +client_item("1_06", "СЭЗ «Астана-Технополис»")
+                        +client_item("1_07", "АО «НАТР»")
+                        +client_item("1_08", "НУХ «Байтерек»")
+                .slider_nav
+                    .bar.active 
+                    .bar
+            .client_slider_wrapper
+                .client_slider
+                    .client_slider__block
+                        +client_item("05", "Jusan Bank")
+                        +client_item("06", "Halyk Bank")
+                        +client_item("07", "Альфа-Банк")
+                        +client_item("08", "АТФ Банк")
+                    .client_slider__block
+                        +client_item("2_05", "ForteBank")
+                        +client_item("2_06", "Банк «ЦентрКредит»")
+                        +client_item("2_07", "Сбербанк")
+                        +client_item("2_08", "Eurasian Bank")
                 .slider_nav
                     .bar.active 
                     .bar
 
-            .client_slider 
-                +client_item("05", "Jusan Bank")
-                +client_item("06", "Halyk Bank")
-                +client_item("07", "Альфа-Банк")
-                +client_item("08", "АТФ Банк")

@@ -3,15 +3,18 @@
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 80px;
+    position: relative;
     @include _sm {
         flex-direction: column;
     }
 
     .director__photo {
-        background: url($images + "director.jpg") no-repeat top;
+        background: url($images + "director.png") no-repeat top;
         min-width: 506px;
         height: 570px;
         display: block;
+        position: relative;
+        z-index: 2;
 
         @include _sm {
             min-width: 300px;
@@ -22,24 +25,11 @@
 
     .director__text_block{
         position: relative;
+        z-index: 2;
         margin-top: 30px;
         max-width: 614px;
         @include _sm {
             margin-top: 0px;
-        }
-
-        .background_elements {
-            position: absolute;
-            background-image: url($images + "director_bg.jpg");
-            display: block;
-            width: 1911px;
-            height: 1075px;
-            top: -500px;
-            left:-900px;
-            z-index: -1;
-            @include _sm {
-                display: none;
-            }
         }
 
         .quote{
@@ -49,6 +39,7 @@
             position: absolute;
             top: 10px;
             right: 20px;
+            z-index: 1;
 
             @include _sm {
                 display: none;
@@ -179,6 +170,21 @@
                 font-size: 14px;
                 text-align: center;
               }
+        }
+    }
+
+    .background_elements {
+        position: absolute;
+        background-image: url($images + "director_bg.jpg");
+        display: block;
+        width: 1911px;
+        height: 1075px;
+        top: 0px;
+        top: -200px;
+        left: -400px;
+        z-index: 1;
+        @include _sm {
+            display: none;
         }
     }
 }

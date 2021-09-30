@@ -72,6 +72,12 @@ a {
         }
     }
 }
+
+.z-index2 {
+    position: relative;
+    z-index: 2;
+}
+
 .main_background {
     background-color: #f8f8f8;
     background-image:  url($images + "bg_element_1.png"), 

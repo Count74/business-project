@@ -1,16 +1,16 @@
 .our_works_bg {
     background-image: linear-gradient(126deg, rgb(157,188,100) 0%, rgb(63,103,63) 100%);
     width: 100%;
-    height: 721px;
     margin-top: 140px;
   }
 
 .our_works {
     position: relative;
     display: flex;
-    justify-content: space-evenly;
-    @include _sm {
-        flex-wrap: wrap;
+    justify-content: space-between;
+    @include _lg {
+        flex-direction: column;
+        align-items: center;
     }
 
 
@@ -19,7 +19,7 @@
         position: absolute;
         background-color: rgb(67, 107, 64);
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.19);
-        left: 20px;
+        left: -10px;
         top: -50px;
         width: 422px;
         height: 61px;
@@ -32,16 +32,16 @@
         @include _sm {
             transform: scale(.6);
             left: 2px;
-            top:-60px
+            top:-57px
         }
 
         &::after {
             content: ''; 
             position: absolute; /* Абсолютное позиционирование */
-            right: -20px; 
+            right: -14px; 
             top: 0px; /* Положение треугольника */
-            border: 10px solid transparent; border-bottom: 10px solid #274a24;
-            border-left: 10px solid #274a24;
+            border: 7px solid transparent; border-bottom: 8px solid #274a24;
+            border-left: 7px solid #274a24;
         }
     }
 
@@ -51,7 +51,7 @@
         color: rgb(155, 186, 99);
         transform: matrix( 0,0.63322976175729,-0.63322976175729,0,0,0);
         position: absolute;
-        right: -500px;
+        right: -600px;
         top: 280px;
         @include _sm {
             display: none;
@@ -61,7 +61,7 @@
 
     .our_works__text_block {
         color: #fff;
-        padding-top: 110px;
+        padding-top: 80px;
         @include _sm {
             padding-top: 20px;
         }
@@ -87,6 +87,7 @@
         .description {
             @extend %font_medium;
             font-size: 24px;
+            line-height: 1.3;
             color: inherit;
             max-width: 460px;
             margin-top: 30px;
@@ -98,6 +99,7 @@
         .points {
             margin-top: 10px;
             display: flex;
+            justify-content: space-between;
             flex-wrap: wrap;
             max-width: 460px;
 
@@ -115,7 +117,7 @@
                 }
 
                 .text1 {
-                    margin-top: 10px;
+                    margin-top: 16px;
                     @extend %font;
                     font-size: 18px;
                     color: inherit;
@@ -125,10 +127,31 @@
                 }
 
                 .text2 {
-                    @extend %font_bold;
-                    font-size: 24px;
+                    @extend %font_medium;
+                    font-size: 30px;
                     color: inherit;
+                    line-height: 1.4;
                     @include _sm {
+                        font-size: 18px;
+                    }
+
+                    .number {
+                        font-weight: bold;
+                        font-size: 48px;
+                        @include _sm {
+                            font-size: 20px;
+                        }
+                    }
+
+                }
+
+                .area{
+                    margin-top: 26px;
+                    font-weight: bold;
+                    font-size: 24px;
+
+                    @include _sm {
+                        margin-top: 6px;
                         font-size: 18px;
                     }
                 }
@@ -145,18 +168,56 @@
     }
 
     .our_work__slider {
-        margin: 40px 0 0 0;
+        margin: 58px 0 0 0;
         background-color: rgb(255, 255, 255);
         width: 489px;
         height: 657px;
         display: block;
         border-radius: 8px;
         box-shadow: 4px -4px 8px 0px rgba(67, 67, 67, 0.43);
-        overflow: hidden;
+        position: relative;
+
         @include _sm {
             width: auto;
             height: auto;
         }
-      }
-      
+
+        .our_work__slider__image_wraper {
+            overflow: hidden;
+        }
+
+        .nav_block {
+            position: absolute;
+            top: 48%;
+            left: -20px;
+            width: 108%;
+            display: flex;
+            justify-content: space-between;
+
+            .nav_element {
+                border-radius: 50%;
+                background-image: linear-gradient( 90deg, rgb(254,81,3) 0%, rgb(243,125,73) 100%);
+                box-shadow: 0px 8px 35px 0px rgba(0, 0, 0, 0.21);
+                display: flex;
+                width: 41px;
+                height: 41px;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+            }
+
+            .left {
+                background: url($images + "work_slider_left_arrow.png") no-repeat left;
+                width: 14px;
+                height: 21px;
+            }
+
+            .right {
+                background: url($images + "work_slider_right_arrow.png") no-repeat right;
+                width: 14px;
+                height: 21px;
+            }
+              
+        }
+    }     
 }
